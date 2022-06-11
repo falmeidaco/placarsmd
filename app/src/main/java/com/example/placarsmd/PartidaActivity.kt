@@ -6,8 +6,6 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
-import android.util.Log
-import android.view.View
 import android.widget.Chronometer
 import android.widget.Button
 import android.widget.TextView
@@ -137,13 +135,9 @@ class PartidaActivity : AppCompatActivity() {
     sharedPreferencesEditor.putString("Time1_"+partidaID, labelTime1?.text.toString())
     sharedPreferencesEditor.putString("Time2_"+partidaID, labelTime2?.text.toString())
     sharedPreferencesEditor.putInt("PontosTime1_"+partidaID, btnTime1?.text.toString().toInt())
-    sharedPreferencesEditor.putInt("pontosTime2_"+partidaID, btnTime1?.text.toString().toInt())
+    sharedPreferencesEditor.putInt("PontosTime2_"+partidaID, btnTime2?.text.toString().toInt())
     sharedPreferencesEditor.putInt("Partida_"+partidaID, partidaID)
     sharedPreferencesEditor.putInt("Partidas", partidaID)
-
-//    sharedPreferencesEditor.putString("_Time1", findViewById<TextView>(R.id.label_time1).text.toString())
-//    sharedPreferencesEditor.putString("_Time2", findViewById<TextView>(R.id.label_time2).text.toString())
-//    sharedPreferencesEditor.putInt("_Tempo", tempoPartida)
     sharedPreferencesEditor.apply()
   }
 
